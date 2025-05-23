@@ -1,0 +1,72 @@
+{
+	"info": {
+		"_postman_id": "6d8f3c0b-909b-4c2b-a60e-e9c9d36b8539",
+		"name": "trabalho 1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44891897",
+		"_collection_link": "https://lucasvinhas-7292255.postman.co/workspace/API-2025-1~ec89fb4b-1246-402d-9b10-895998469ea9/collection/44891897-6d8f3c0b-909b-4c2b-a60e-e9c9d36b8539?action=share&source=collection_link&creator=44891897"
+	},
+	"item": [
+		{
+			"name": "lancar venda",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dataVenda\": \"2024-07-05\",\r\n    \"valorVenda\": 700,\r\n    \"vendedor\":{\r\n        \"codigoVendedor\": 257,\r\n        \"tipo_vendedor\": \"ve\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/vendas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vendas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listar por id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"descricao\": \"TV 42\",\r\n    \"valor\": 1500,\r\n    \"dataCadastro\": \"2025-05-14\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/vendas/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vendas",
+						"7"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
